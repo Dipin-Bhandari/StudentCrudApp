@@ -1,0 +1,12 @@
+﻿@model StudentCrudApp.Models.Student
+
+<h2>Edit Student</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <label>Name</label>
+    <input asp-for="Name" /><br />
+    <label>School</label>
+    <input asp-for="School" /><br />
+    <button type="submit">Update</button>
+</form>

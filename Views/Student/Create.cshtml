@@ -1,0 +1,11 @@
+﻿@model StudentCrudApp.Models.Student
+
+<h2>Add Student</h2>
+
+<form asp-action="Create" method="post">
+    <label>Name</label>
+    <input asp-for="Name" /><br />
+    <label>School</label>
+    <input asp-for="School" /><br />
+    <button type="submit">Add</button>
+</form>

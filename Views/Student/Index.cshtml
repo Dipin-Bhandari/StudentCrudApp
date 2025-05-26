@@ -1,0 +1,25 @@
+﻿@model List<StudentCrudApp.Models.Student>
+
+<h2>Student List</h2>
+<a asp-action="Create">Add New Student</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>School</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.Id</td>
+            <td>@student.Name</td>
+            <td>@student.School</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@student.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
